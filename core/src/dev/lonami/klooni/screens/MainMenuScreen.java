@@ -76,7 +76,7 @@ public class MainMenuScreen extends InputListener implements Screen {
         starButton.addListener(new ChangeListener() {
             @Override
             public void changed(ChangeEvent event, Actor actor) {
-                Gdx.net.openURI("https://github.com/LonamiWebs/Klooni1010/stargazers");
+                Gdx.net.openURI("https://github.com/TheLogicMaster/Klooni1010/stargazers");
             }
         });
         table.add(starButton).space(16);

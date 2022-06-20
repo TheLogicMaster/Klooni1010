@@ -163,6 +163,11 @@ class GameScreen implements Screen, InputProcessor, BinSerializable {
     //region Screen
 
     @Override
+    public boolean scrolled (float amountX, float amountY) {
+        return false;
+    }
+
+    @Override
     public void show() {
         if (pauseMenu.isShown()) // Will happen if we go to the customize menu
             Gdx.input.setInputProcessor(pauseMenu);
@@ -220,7 +225,7 @@ class GameScreen implements Screen, InputProcessor, BinSerializable {
 
     @Override
     public boolean keyUp(int keycode) {
-        if (keycode == Input.Keys.P || keycode == Input.Keys.BACK) // Pause
+        if (keycode == Input.Keys.P || keycode == Input.Keys.BUTTON_SELECT || keycode == Input.Keys.BACK) // Pause
             showPauseMenu();
 
         return false;
@@ -287,11 +292,6 @@ class GameScreen implements Screen, InputProcessor, BinSerializable {
 
     @Override
     public boolean mouseMoved(int screenX, int screenY) {
-        return false;
-    }
-
-    @Override
-    public boolean scrolled(int amount) {
         return false;
     }
 

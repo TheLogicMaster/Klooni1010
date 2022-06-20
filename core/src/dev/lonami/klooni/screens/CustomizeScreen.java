@@ -152,7 +152,7 @@ class CustomizeScreen implements Screen {
         issuesButton.addListener(new ChangeListener() {
             @Override
             public void changed(ChangeEvent event, Actor actor) {
-                Gdx.net.openURI("https://github.com/LonamiWebs/Klooni1010/issues");
+                Gdx.net.openURI("https://github.com/TheLogicMaster/Klooni1010/issues");
             }
         });
         optionsGroup.addActor(issuesButton);
